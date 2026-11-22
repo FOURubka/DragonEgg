@@ -1,4 +1,4 @@
-# 🐉 DragonEgg - Ultimate Dragon Power Plugin
+# DragonEgg
 
 [![Modrinth](https://img.shields.io/modrinth/dt/dragonegg?style=for-the-badge&logo=modrinth&color=00af5c)](https://modrinth.com/plugin/dragonegg)
 [![Spigot](https://img.shields.io/badge/dynamic/json?style=for-the-badge&logo=spigot&color=ff9900&label=downloads&query=downloads&url=https://api.spigotmc.org/simple/0.2.0/index.php?action=getResource&id=0)](https://www.spigotmc.org/resources/dragonegg)

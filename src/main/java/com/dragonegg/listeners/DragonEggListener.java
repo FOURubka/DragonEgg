@@ -7,6 +7,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
+import org.bukkit.event.inventory.InventoryDragEvent;
 import org.bukkit.event.inventory.InventoryCloseEvent;
 import org.bukkit.inventory.InventoryHolder;
 
@@ -46,6 +47,11 @@ public class DragonEggListener implements Listener {
 
         // Dragon Egg can be freely moved between inventories
         // No restrictions on trading, dropping, or storing
+    }
+
+    @EventHandler
+    public void onInventoryDrag(InventoryDragEvent event) {
+        if (event.getInventory().getHolder() instanceof DragonEggMenu) event.setCancelled(true);
     }
 
     /**

@@ -11,7 +11,6 @@ import com.dragonegg.listeners.PlayerListener;
 import com.dragonegg.listeners.VisualListener;
 import com.dragonegg.mechanics.*;
 import com.dragonegg.menu.MenuManager;
-import com.dragonegg.utils.Metrics;
 import com.dragonegg.utils.UpdateChecker;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -49,8 +48,6 @@ public class DragonEggMain extends JavaPlugin {
     // Listeners
     private VisualListener visualListener;
 
-    // Metrics ID for bStats
-    private static final int METRICS_ID = 0; // Set your bStats ID here
     
     @Override
     public void onEnable() {
@@ -75,9 +72,6 @@ public class DragonEggMain extends JavaPlugin {
         
         // Register commands
         registerCommands();
-        
-        // Initialize bStats metrics
-        initializeMetrics();
         
         // Check for updates
         checkForUpdates();
@@ -151,16 +145,6 @@ public class DragonEggMain extends JavaPlugin {
         DragonEggCommand command = new DragonEggCommand(this);
         getCommand("dragonegg").setExecutor(command);
         getCommand("dragonegg").setTabCompleter(command);
-    }
-    
-    /**
-     * Initialize bStats metrics for plugin statistics
-     */
-    private void initializeMetrics() {
-        if (getConfig().getBoolean("metrics.enabled", true)) {
-            new Metrics(this, METRICS_ID);
-            log("&7bStats metrics initialized.");
-        }
     }
     
     /**

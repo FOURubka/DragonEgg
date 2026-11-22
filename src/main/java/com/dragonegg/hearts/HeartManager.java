@@ -234,11 +234,6 @@ public class HeartManager {
             }
         }
         
-        // Check if player is in range of placed egg
-        if (plugin.getConfigManager().isPlacedModeEnabled()) {
-            // This would require tracking placed eggs - simplified for now
-        }
-        
         return false;
     }
 
